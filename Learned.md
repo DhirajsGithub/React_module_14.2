@@ -43,6 +43,12 @@ You should use getStaticPaths if you’re statically pre-rendering pages that us
 
 ### the fallback key 
 If fallback is false, then any paths not returned by getStaticPaths will result in a 404 page.
+<br>
+The paths that have not been generated at build time will not result in a 404 page. Instead, Next.js will serve a “fallback” version of the page on the first request to such a path.
+<br>
+If fallback is 'blocking', new paths not returned by getStaticPaths will wait for the HTML to be generated, identical to SSR (hence why blocking), and then be cached for future requests so it only happens once per path.
+
+
 
 <hr>
 
@@ -52,3 +58,10 @@ If fallback is false, then any paths not returned by getStaticPaths will result 
 * the file code will be never run on client side, it will only be run on server side
 
 ## the Head tag from next/head allow us to add metatags/title/description for SEO, since we don't have an index.html in nextjs propject
+
+## deplying you NextJS app
+https://vercel.com/#get-started
+<br>
+add your code to github with git push --all
+<br>
+network access in mongodb must be access from anywhere or ipaddress : 0.0.0.0/0  
