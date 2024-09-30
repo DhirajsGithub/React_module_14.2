@@ -58,7 +58,7 @@ export async function getStaticProps() {
   // fetch data from an API
   // we can create a file in api folder to fetch data and can fetch data from that file, but that will be cumbersum
   const client = await MongoClient.connect(
-    "mongodb+srv://Mycluster:FQOfwqsBqF4YD3jg@cluster0.djouu.mongodb.net/?retryWrites=true&w=majority"
+    "mongodb+srv://dhirajsCluster:dhirajsCluster@dhirajscluster.hb47mqe.mongodb.net/"
   );
   const db = client.db();
 
